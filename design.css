@@ -1,0 +1,147 @@
+body 
+{
+    background-color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.Calculator
+{
+    box-sizing: border-box;
+    width: 350px;
+    background-color: #103575;
+    padding: 15px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+#screen
+{
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: hsl(0, 100%, 100%);
+    color: #ebad1c;
+    text-align: right;
+    font-size: 3rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.toolbar 
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px 20;
+    border-top: 1px solid #103575;
+    color: #103575;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+#delete
+{
+    background: none;      
+    border: none;          
+    color: #ebad1c;      
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 25%;            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: opacity 0.2s;
+}
+
+.buttons 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+button 
+{
+    width: 100px;
+    max-width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    background-color: #ebb70c;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+}
+
+button:hover
+{
+    background-color: hsl(50, 90%, 50%);
+}
+
+button:active
+{
+    background-color: hsl(49, 80%, 48%);
+}
+
+#cleare 
+{
+    background-color: antiquewhite;
+    color: #775d07;
+}
+
+#cleare:hover
+{
+    background-color:  hsl(34, 79%, 85%) ;
+}
+
+#cleare:active
+{
+    background-color:  hsl(40, 85%, 90%);
+}
+
+.operator
+{
+    background-color: antiquewhite;
+    color:#103575;
+}
+
+.operator:hover
+{
+    background-color: hsl(34, 79%, 85%);
+    color:#103575;
+}
+
+#operator:active
+{
+    background-color:  hsl(40, 85%, 90%);
+}
+
+#equal
+{
+    background-color: #4d9ceb;
+}
+
+#equal:hover
+{
+    background-color: hsl(215, 85%, 70%);
+}
+
+#equal:active
+{
+    background-color: hsl(220, 90%, 80%);
+}
