@@ -49,7 +49,7 @@ function calculate() {
     displayValue = displayValue.replace(/(\d+)!/g, (_, num) =>
       factorial(Number(num)),
     );
-    
+  
     displayValue = displayValue.replace(/(\d+(\.\d+)?)%/g, "($1/100)");
     displayValue = displayValue.replace(/√(\d+(\.\d+)?|\([^)]+\))/g, "Math.sqrt($1)");
     displayValue = displayValue.replace(
