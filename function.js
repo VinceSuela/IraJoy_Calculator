@@ -40,7 +40,7 @@ function appendToDisplay(input) {
 }
 
 function trimTrailingOperators(expression) {
-  return expression.replace(/[+\-*/\)\)]+$/, "");
+  return expression.replace(/[+\-*/%^]+$/, "");
 }
 
 function calculate() {
@@ -49,9 +49,9 @@ function calculate() {
     displayValue = displayValue.replace(/(\d+)!/g, (_, num) =>
       factorial(Number(num)),
     );
-
+    
     displayValue = displayValue.replace(/(\d+(\.\d+)?)%/g, "($1/100)");
-    displayValue = displayValue.replace(/√(\d+(\.\d+)?)/g, "Math.sqrt($1)");
+    displayValue = displayValue.replace(/√(\d+(\.\d+)?|\([^)]+\))/g, "Math.sqrt($1)");
     displayValue = displayValue.replace(
       /(\d+(\.\d+)?)\^(\d+(\.\d+)?)/g,
       "Math.pow($1, $3)",
