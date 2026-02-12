@@ -1,55 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Calculator</title>
-</head>
-    <link rel="stylesheet" href="style.css">
-<body>
-
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
     <div class="Calculator">
+      <input id="screen" placeholder="0" readonly />
 
-            <input id="screen" placeholder="0" readonly>
+      <div class="toolbar">
+        <button id="delete" onclick="backspace('')">CE</button>
+      </div>
 
-        <div class="toolbar">
-            <button id="delete" onclick="backspace('')">CE</button>
-        </div>
-    
-        <div class="buttons">
-            <!--Row 1-->
-            <button onclick="clearDisplay()" id="cleare">AC</button>
-            <button onclick="appendToDisplay('!')" class="operator">x!</button>
-            <button onclick="appendToDisplay('%')" class="operator">%</button>
-            <button onclick="appendToDisplay('/')" class="operator">÷</button>
+      <div class="buttons">
+        <!--Row 1-->
+        <button onclick="clearDisplay()" id="cleare">AC</button>
+        <button onclick="appendToDisplay('!')" class="operator">x!</button>
+        <button onclick="appendToDisplay('√')" class="operator">√x</button>
+        <button onclick="appendToDisplay('÷')" class="operator">÷</button>
 
-             <!--Row 2-->
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('*')" class="operator">×</button>
+        <!--Row 2-->
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('×')" class="operator">×</button>
 
-             <!--Row 3-->
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('-')" class="operator">-</button>
+        <!--Row 3-->
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')" class="operator">-</button>
 
-             <!--Row 4-->
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('+')" class="operator">+</button>
+        <!--Row 4-->
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')" class="operator">+</button>
 
-             <!--Row 5-->
-            <button onclick="appendToDisplay('-')" class="operator">+/-</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()" id="equal">=</button>
-
-        </div>
+        <!--Row 5-->
+        <button onclick="appendToDisplay('%')" class="operator">%</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculate()" id="equal">=</button>
+      </div>
     </div>
-    
+
     <script src="function.js"></script>
-</body>
+  </body>
 </html>

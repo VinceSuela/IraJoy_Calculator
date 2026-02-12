@@ -118,6 +118,7 @@ button:active
 {
     background-color: antiquewhite;
     color:#103575;
+    font-size: 1.5rem;
 }
 
 .operator:hover
